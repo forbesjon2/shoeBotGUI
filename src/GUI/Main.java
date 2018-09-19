@@ -4,13 +4,16 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 //import org.apache.http.impl.client.CloseableHttpClient;
 //import org.apache.http.impl.client.HttpClients;
 //green    new java.awt.Color(176, 210, 54)
-//black    new java.awt.Color(233,232,232)
-//cream	   new java.awt.Color(176, 210, 54)
+//cream	   new java.awt.Color(233,232,232)
+//blue	   new java.awt.Color(61,195,218)
 
 
 public class Main {
@@ -57,4 +60,47 @@ public class Main {
 	public static JButton settingsButton2 = new JButton();
 	public static boolean[] buttonSelect = {true, false, false, false, false};
 	
+	
+	/**
+	 * These come from the run configuration panel
+	 */
+	public static JTable runConfigTable = new JTable();
+	public static JLabel createRunConfigLabel = new JLabel();
+	public static JTable tableRunPanel = new JTable();
+	public static DefaultTableModel tableModelRunPanel = new DefaultTableModel();
+	public static JTextField rURLText = new JTextField();
+	public static JTextField numEntriesText = new JTextField();
+	public static JTextField sizeSecondaryText = new JTextField();
+	public static JTextField sizePrimaryText = new JTextField();
+	public static JTextField numThreadsText = new JTextField();
+	public static JTextField cardNumberText = new JTextField();
+	public static JTextField monthText = new JTextField();
+	public static JTextField yearText = new JTextField();
+	public static JTextField cvvText = new JTextField();
+	public static JLabel runLabel = new JLabel();
+	public static JLabel lblConfigurations = new JLabel();
+	public static JLabel lblTitle = new JLabel();
+	public static JLabel lblDescription = new JLabel();
+	public static JLabel labelNumAccountsAvailable = new JLabel();
+	public static JLabel labelNumMaxEntries = new JLabel();
+	public static JLabel labelNumAvailableProxies = new JLabel();
+	
+	
+	/**
+	 * These come from the card panel
+	 */
+	public static JTextField numCardsText = new JTextField();
+	public static JTextField spendLimitText = new JTextField();
+	public static JTextField accessTokenCreateCardText = new JTextField();
+	public static JTextField accessTokenLoadCardText = new JTextField();
+	public static JScrollPane scrollPaneCreateNewCards = new JScrollPane();
+	public static JScrollPane scrollPaneLoadExistingCards = new JScrollPane();
+	
+	
 }
+
+
+
+
+
+

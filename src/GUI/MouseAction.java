@@ -58,37 +58,43 @@ public class MouseAction extends Main implements MouseListener{
 			break;
 		case "cardButtonSelect":
 			selectButton(0);
-			UserInterface.setOne();
+			UserInterface.setCardPanel();
 			break;
 		case "cardButton":
 			selectButton(0);
-			UserInterface.setOne();
+			UserInterface.setCardPanel();
 			break;
 		case "proxyButtonSelect":
 			selectButton(1);
-			UserInterface.setTwo();
+			UserInterface.setNullPanel();
 			break;
 		case "proxyButton":
 			selectButton(1);
-			UserInterface.setTwo();
+			UserInterface.setNullPanel();
 			break;
 		case "accountButtonSelect":
 			selectButton(2);
+			UserInterface.setNullPanel();
 			break;
 		case "accountButton":
 			selectButton(2);
+			UserInterface.setNullPanel();
 			break;
 		case "runButtonSelect":
 			selectButton(3);
+			UserInterface.setRunPanel();
 			break;
 		case "runButton":
 			selectButton(3);
+			UserInterface.setRunPanel();
 			break;
 		case "settingsButtonSelect":
 			selectButton(4);
+			UserInterface.setNullPanel();
 			break;
 		case "settingsButton":
 			selectButton(4);
+			UserInterface.setNullPanel();
 			break;
 		case "expandLabel":
 			Ani controller = new Ani(40);
@@ -102,6 +108,9 @@ public class MouseAction extends Main implements MouseListener{
 						sideBar.getWidth(), sideBar.getWidth() - 300, sideBar.getHeight(), sideBar.getHeight(), 100));
 				decreasePaneSize();
 			}
+			break;
+		case "createRunConfigButton":
+			System.out.println("Oh1");
 			break;
 		}			
 	}
@@ -397,8 +406,11 @@ public class MouseAction extends Main implements MouseListener{
 			Main.login.setBackground(Color.BLACK);
 			Main.login.setForeground(Color.WHITE);
 			break;
+		case "createRunConfigLabel":
+			Main.createRunConfigLabel.setBackground(Color.WHITE);
+			Main.createRunConfigLabel.setForeground(Color.BLACK);
+			break;
 		}
-		
 	}
 
 	
@@ -409,6 +421,10 @@ public class MouseAction extends Main implements MouseListener{
 		case "connect":
 			Main.login.setBackground(Color.WHITE);
 			Main.login.setForeground(Color.BLACK);
+			break;
+		case "createRunConfigLabel":
+			Main.createRunConfigLabel.setBackground(Color.BLACK);
+			Main.createRunConfigLabel.setForeground(Color.WHITE);
 			break;
 		}
 	}

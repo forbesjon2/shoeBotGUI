@@ -5,50 +5,34 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.EventQueue;
-import java.awt.color.ColorSpace;
-import java.awt.event.ActionListener;
-import java.awt.geom.Line2D;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.awt.Font;
 
-import javax.imageio.ImageIO;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import javax.swing.border.AbstractBorder;
-import javax.swing.border.Border;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.SwingConstants;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
+import javax.swing.border.MatteBorder;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
-import GUI.MouseAction;
+import java.awt.ScrollPane;
+import javax.swing.JTextField;
 
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+public class UserInterface extends JFrame{
+	//private static JPanel contentPane;
 
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.border.MatteBorder;
-import javax.swing.border.TitledBorder;
-
-public class UserInterface extends JFrame {
-
-//	protected static JPanel contentPane = Main.contentPane;
 	protected static JPanel contentPane = new JPanel();
-	protected static JPanel mainPanel = new JPanel();
-	private JTable table;
+
+	
 
 	/**
 	 * Launch the application.
@@ -58,6 +42,7 @@ public class UserInterface extends JFrame {
 			public void run() {
 				try {
 					UserInterface frame = new UserInterface();
+					frame.setBounds(60, 0, 1200, 770);
 					frame.setLocationRelativeTo(null); 			//center it
 					frame.setUndecorated(true);  				//no exit button or top interface
 					frame.setVisible(true);
@@ -74,51 +59,32 @@ public class UserInterface extends JFrame {
 	public UserInterface() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1000, 740);
+		setBounds(60, 0, 1200, 770);
 		contentPane.setBackground(new java.awt.Color(233,232,232));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		createSidebar(contentPane);
 		
-		
-		mainPanel.setBackground(new java.awt.Color(233,232,232));
-		mainPanel.setBounds(60, 0, 1000, 740);
-		contentPane.add(mainPanel);
-		mainPanel.setLayout(null);
-		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(99, 312, 421, 313);
-		mainPanel.add(scrollPane);
-		
 
 		
-		DefaultTableModel tableModel = new DefaultTableModel(0,0);
-		tableModel.addColumn("");
-		tableModel.addColumn("");
-		tableModel.addColumn("");
-		
-		tableModel.addRow(new Object[]{"ex1","ex2", "ext3"});
-		tableModel.addRow(new Object[]{"ex1","ex2", "ext3"});
-		tableModel.addRow(new Object[]{"ex1","ex2", "exffft3"});
-		tableModel.addRow(new Object[]{"ex1","ex2", "extff3"});
-		table = Tables.tableThreeColumns(scrollPane, tableModel);
-		scrollPane.setBackground(new java.awt.Color(233,232,232));
-		scrollPane.setForeground(new java.awt.Color(233,232,232));
-		scrollPane.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(233,232,232)));
-		scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0,0));
-		
-		scrollPane.setViewportView(table);
-		
-	
+		//contentPane = Panels.runPanel(contentPane);
+		// contentPane = Panels.cardPanel(contentPane);
+
 		
 	}
 
-	public static void setOne() {
+	public static void setRunPanel() {
 		setNullPanel();
-		JLabel lblThisOne = new JLabel("this one");
-		lblThisOne.setBounds(110, 178, 48, 14);
-		mainPanel.add(lblThisOne);
+		contentPane = Panels.runPanel(contentPane);
+		contentPane.validate();
+		contentPane.repaint();
+	}
+	
+	
+	public static void setCardPanel() {
+		setNullPanel();
+		contentPane = Panels.cardPanel(contentPane);
 		contentPane.validate();
 		contentPane.repaint();
 	}
@@ -128,7 +94,7 @@ public class UserInterface extends JFrame {
 		setNullPanel();
 		JLabel lblThisOne = new JLabel("this two aahh!");
 		lblThisOne.setBounds(110, 178, 48, 14);
-		mainPanel.add(lblThisOne);
+		//mainPanel.add(lblThisOne);
 		contentPane.validate();
 		contentPane.repaint();
 	}
@@ -139,7 +105,18 @@ public class UserInterface extends JFrame {
 	 * changing panels. Resets main panel to have no contents
 	 */
 	protected static void setNullPanel() {
-		mainPanel.removeAll();
+		//contentPane.removeAll();
+		for(Component comp :contentPane.getComponents()) {
+			try {
+				if(comp.getName().compareToIgnoreCase("sideBar")==0) {
+					continue;
+				}else {
+					contentPane.remove(comp);
+				}	
+			}catch(Exception e) {
+				contentPane.remove(comp);
+			}
+		}		
 		contentPane.validate();
 		contentPane.repaint();
 	}
@@ -158,7 +135,7 @@ public class UserInterface extends JFrame {
 		JPanel sideBar = Main.sideBar;
 		//JPanel sideBar = new JPanel();
 		sideBar.setBackground(new java.awt.Color(61,195,218));
-		sideBar.setBounds(0, 0, 30, 745);
+		sideBar.setBounds(0, 0, 30, 770);
 		//sideBar.setBounds(0, 0, 330, 745);
 		sideBar.setName("sideBar");
 		contentPane.add(sideBar);
@@ -283,7 +260,6 @@ public class UserInterface extends JFrame {
 		JButton accountButton = Main.accountButton;
 		// JButton accountButton = new JButton();
 		accountButton.setBounds(-10, 273, 50, 48);
-		sideBar.add(accountButton);
 		accountButton.setName("accountButton");
 		accountButton.addMouseListener(new MouseAction());
 		accountButton.setFocusPainted(false);
@@ -294,6 +270,7 @@ public class UserInterface extends JFrame {
 		//accountButton.setText("Create");
 		accountButton.setText("A");
 		accountButton.setFont(new Font("Roboto Lt", Font.PLAIN, 20));
+		sideBar.add(accountButton);
 		runButtonSelect.setOpaque(true);
 		runButtonSelect.setBackground(new java.awt.Color(61,195,218));
 		runButtonSelect.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -398,10 +375,3 @@ public class UserInterface extends JFrame {
 		sideBar.add(expandLabel);
 	}
 }
-
-
-
-
-
-
-
