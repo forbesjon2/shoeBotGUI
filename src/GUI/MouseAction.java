@@ -66,11 +66,11 @@ public class MouseAction extends Main implements MouseListener{
 			break;
 		case "proxyButtonSelect":
 			selectButton(1);
-			UserInterface.setNullPanel();
+			UserInterface.setProxyPanel();
 			break;
 		case "proxyButton":
 			selectButton(1);
-			UserInterface.setNullPanel();
+			UserInterface.setProxyPanel();
 			break;
 		case "accountButtonSelect":
 			selectButton(2);

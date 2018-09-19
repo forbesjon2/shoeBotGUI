@@ -16,6 +16,130 @@ import javax.swing.table.DefaultTableModel;
 public class Panels extends UserInterface{
 	
 	
+	
+	
+	/**
+	 * Creates the proxy panel TODO add logic
+	 * @param contentPane	The content pane from userInterface
+	 * @return contentPane	Returns the same contentPane with elements
+	 */
+	public static JPanel proxyPanel(JPanel contentPane) {
+		//___________Dark proxy panel__________
+		JPanel darkProxyPanel = Main.darkProxyPanel;
+		darkProxyPanel.setBackground(new java.awt.Color(51, 51, 51));
+		darkProxyPanel.setBounds(613, 0, 585, 745);
+		contentPane.add(darkProxyPanel);
+		darkProxyPanel.setLayout(null);
+		
+		
+		
+		//_____________Text to change/add listeners__________________
+		
+		JLabel lblOnesProxy = Main.lblOnesProxy;
+		lblOnesProxy.setText("2");
+		lblOnesProxy.setForeground(Color.WHITE);
+		lblOnesProxy.setFont(new Font("Roboto Lt", Font.PLAIN, 200));
+		lblOnesProxy.setBounds(30, 22, 140, 167);
+		darkProxyPanel.add(lblOnesProxy);
+		
+		JLabel lblTenthsProxy = Main.lblTenthsProxy;
+		lblTenthsProxy.setText("1");
+		lblTenthsProxy.setFont(new Font("Roboto Lt", Font.PLAIN, 200));
+		lblTenthsProxy.setBounds(515, 20, 140, 167);
+		contentPane.add(lblTenthsProxy);
+		
+		JLabel lblHundredthsProxy = Main.lblHundredthsProxy;
+		lblHundredthsProxy.setText("");
+		lblHundredthsProxy.setFont(new Font("Roboto Lt", Font.PLAIN, 200));
+		lblHundredthsProxy.setBounds(415, 20, 140, 167);
+		contentPane.add(lblHundredthsProxy);
+		
+		
+		JLabel labelRunCompleteScanTitleButton = Main.labelRunCompleteScanTitleButton;
+		labelRunCompleteScanTitleButton.setText("Run complete scan");
+		labelRunCompleteScanTitleButton.setFont(new Font("Roboto Lt", Font.PLAIN, 17));
+		labelRunCompleteScanTitleButton.setBounds(390, 375, 177, 32);
+		contentPane.add(labelRunCompleteScanTitleButton);
+		
+		JLabel lblCheckForNew = Main.lblCheckForNew;
+		lblCheckForNew.setText("Check for new proxies");
+		lblCheckForNew.setFont(new Font("Roboto", Font.BOLD, 17));
+		lblCheckForNew.setBounds(390, 500, 202, 32);
+		contentPane.add(lblCheckForNew);
+		
+		JLabel lblOptimizeExistingProxy = Main.lblOptimizeExistingProxy;
+		lblOptimizeExistingProxy.setText("Optimize proxy list");
+		lblOptimizeExistingProxy.setFont(new Font("Roboto Lt", Font.PLAIN, 17));
+		lblOptimizeExistingProxy.setBounds(390, 625, 177, 32);
+		contentPane.add(lblOptimizeExistingProxy);
+		
+		JLabel optimizeExistingProxiesContent = Main.optimizeExistingProxiesContent;
+		optimizeExistingProxiesContent.setText("<html>Scrapes the existing proxy sites for its exist-<br>ing proxies and uploads those to the data-<br>base if they dont already exist. Use this pro<br>cess sparingly as it is only needed about<br>once every week or so");
+		optimizeExistingProxiesContent.setForeground(Color.WHITE);
+		optimizeExistingProxiesContent.setFont(new Font("Rubik Light", Font.ITALIC, 13));
+		optimizeExistingProxiesContent.setBounds(10, 597, 340, 85);
+		darkProxyPanel.add(optimizeExistingProxiesContent);
+		
+		JLabel lblTheLongerOf = Main.lblTheLongerOf;
+		lblTheLongerOf.setText("<html> The longer of the other two processes, this both<br>checks for new and optimizes existing proxies .");
+		lblTheLongerOf.setForeground(Color.WHITE);
+		lblTheLongerOf.setFont(new Font("Rubik Light", Font.ITALIC, 13));
+		lblTheLongerOf.setBounds(10, 361, 340, 61);
+		darkProxyPanel.add(lblTheLongerOf);
+		
+		JLabel lblscrapesTheExisting = Main.lblscrapesTheExisting;
+		lblscrapesTheExisting.setText("<html>Scrapes the existing proxy sites for its exist-<br>ing proxies and uploads those to the data-<br>base if they dont already exist. Use this pro<br>cess sparingly as it is only needed about<br>once every week or so");
+		lblscrapesTheExisting.setForeground(Color.WHITE);
+		lblscrapesTheExisting.setFont(new Font("Rubik", Font.BOLD | Font.ITALIC, 13));
+		lblscrapesTheExisting.setBounds(10, 473, 453, 85);
+		darkProxyPanel.add(lblscrapesTheExisting);
+		
+		
+		
+		//____________Random text & labels to ignore__________________
+		JLabel randomTextProxyDark = new JLabel("<html> Its more ideal to have<br>before your run the scri<br>number tells you, on a<br>connect to each of the<br>ning a full proxy scan s<br>proxy sites and upload<br>That scan is followed b<br>that tests the connect<br>that exist on the datab<br>quickest ones to be sto");
+		randomTextProxyDark.setFont(new Font("Rubik Light", Font.ITALIC, 13));
+		randomTextProxyDark.setHorizontalAlignment(SwingConstants.RIGHT);
+		randomTextProxyDark.setBounds(340, 5, 245, 180);
+		darkProxyPanel.add(randomTextProxyDark);
+		randomTextProxyDark.setForeground(Color.WHITE);
+		
+		JLabel lblProxiesDC = new JLabel("Proxies");
+		lblProxiesDC.setForeground(Color.WHITE);
+		lblProxiesDC.setFont(new Font("Roboto Th", Font.PLAIN, 50));
+		lblProxiesDC.setBounds(10, 200, 200, 45);
+		darkProxyPanel.add(lblProxiesDC);
+		
+		JLabel randomTextProxyLight = new JLabel("<html> more than enough proxies<br>pt. The average latency<br>verage, how fast it takes to<br>se available proxies. Run-<br>crapes the available free<br>s them to the database.<br>y an optimization algorithm<br>ion speed to the proxies<br>ase and sorts out the<br>red locally in this session.");
+		randomTextProxyLight.setFont(new Font("Rubik Light", Font.ITALIC, 13));
+		randomTextProxyLight.setBounds(30, 5, 220, 180);
+		contentPane.add(randomTextProxyLight);
+		
+		JLabel lblAvailableproxyDC = new JLabel("Available");
+		lblAvailableproxyDC.setFont(new Font("Roboto", Font.BOLD, 50));
+		lblAvailableproxyDC.setBounds(400, 200, 265, 45);
+		contentPane.add(lblAvailableproxyDC);
+		
+		return contentPane;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/**
+	 * Creates the card panel TODO add logic
+	 * 
+	 * @param contentPane
+	 * @return contentPane
+	 */
 	public static JPanel cardPanel(JPanel contentPane) {		
 		//___________Text fields (parameters)_________
 		JTextField numCardsText = Main.numCardsText;

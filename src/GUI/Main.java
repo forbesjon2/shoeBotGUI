@@ -14,6 +14,7 @@ import javax.swing.table.DefaultTableModel;
 //green    new java.awt.Color(176, 210, 54)
 //cream	   new java.awt.Color(233,232,232)
 //blue	   new java.awt.Color(61,195,218)
+//black	   new java.awt.Color(51, 51, 51)
 
 
 public class Main {
@@ -96,6 +97,20 @@ public class Main {
 	public static JScrollPane scrollPaneCreateNewCards = new JScrollPane();
 	public static JScrollPane scrollPaneLoadExistingCards = new JScrollPane();
 	
+	
+	/**
+	 * These come from the proxy panel
+	 */
+	public static JLabel lblscrapesTheExisting = new JLabel();
+	public static JLabel lblTheLongerOf = new JLabel();
+	public static JLabel optimizeExistingProxiesContent = new JLabel();
+	public static JLabel lblOptimizeExistingProxy = new JLabel();
+	public static JLabel lblCheckForNew = new JLabel();
+	public static JLabel labelRunCompleteScanTitleButton = new JLabel();
+	public static JLabel lblHundredthsProxy = new JLabel();
+	public static JLabel lblTenthsProxy = new JLabel();
+	public static JLabel lblOnesProxy = new JLabel();
+	public static JPanel darkProxyPanel = new JPanel();
 	
 }
 

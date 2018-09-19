@@ -66,11 +66,12 @@ public class UserInterface extends JFrame{
 		contentPane.setLayout(null);
 		createSidebar(contentPane);
 		
+		
 
 		
 		//contentPane = Panels.runPanel(contentPane);
 		// contentPane = Panels.cardPanel(contentPane);
-
+		//want 585 for 1/2 of panel length to be white -> 585px for black
 		
 	}
 
@@ -88,17 +89,16 @@ public class UserInterface extends JFrame{
 		contentPane.validate();
 		contentPane.repaint();
 	}
+
 	
-	
-	public static void setTwo() {
+	public static void setProxyPanel() {
 		setNullPanel();
-		JLabel lblThisOne = new JLabel("this two aahh!");
-		lblThisOne.setBounds(110, 178, 48, 14);
-		//mainPanel.add(lblThisOne);
+		contentPane = Panels.proxyPanel(contentPane);
 		contentPane.validate();
 		contentPane.repaint();
 	}
 	
+
 	
 	/**
 	 * Used to reset the panel to avoid overfitting when
