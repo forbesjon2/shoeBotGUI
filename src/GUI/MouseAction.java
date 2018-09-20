@@ -74,13 +74,16 @@ public class MouseAction extends Main implements MouseListener{
 			break;
 		case "accountButtonSelect":
 			selectButton(2);
-			UserInterface.setNullPanel();
+			UserInterface.setAccountPanel();
 			break;
 		case "accountButton":
+			Main.drawLine = true;
 			selectButton(2);
-			UserInterface.setNullPanel();
+			UserInterface.setAccountPanel();
 			break;
 		case "runButtonSelect":
+			Main.drawLine = true;
+			
 			selectButton(3);
 			UserInterface.setRunPanel();
 			break;

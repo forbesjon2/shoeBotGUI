@@ -23,7 +23,7 @@ public class Main {
 	 */
 //	public static String apiAddress = "http://localhost:3000/sb";
 //	public static CloseableHttpClient httpAPIClient = HttpClients.createDefault();
-//	
+	public static boolean drawLine = false;
 	/**
 	 * These come from the login form class
 	 */
@@ -112,6 +112,25 @@ public class Main {
 	public static JLabel lblOnesProxy = new JLabel();
 	public static JPanel darkProxyPanel = new JPanel();
 	
+	
+	
+	/**
+	 * These come from the accounts panel
+	 */
+	public static JTextField numAccountsText = new JTextField();
+	public static JTextField getSMSEmailText = new JTextField();
+	public static JTextField nikeAccountFirstNameText = new JTextField();
+	public static JTextField nikeAccountLastNameText = new JTextField();
+	public static JTextField addressLineIText = new JTextField();
+	public static JTextField getSMSTokenText = new JTextField();
+	public static JTextField nikePasswordText = new JTextField();
+	public static JTextField addressLineIIText = new JTextField();
+	public static JTextField stateText = new JTextField();
+	public static JTextField zipText = new JTextField();
+	public static JTextField phoneNumberText = new JTextField();
+	public static JTextField nikeMainEmailText = new JTextField();
+	public static JTextField cityText = new JTextField();
+	public static JLabel labelNumAvailableAccountsAP = new JLabel();
 }
 
 

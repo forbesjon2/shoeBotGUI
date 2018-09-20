@@ -13,7 +13,247 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 
+/**
+ * Common terminology
+ * 
+ * DC = Don't change -> labels just to show not dynamic text
+ * 
+ * label<variable name>Button = Label that functions as a button
+ * @author ur mom
+ *
+ */
 public class Panels extends UserInterface{
+	
+	
+	
+	public static JPanel accountPanel(JPanel contentPane) {
+
+		//______________Dynamic variables & text fields_______________
+		JLabel labelNumAvailableAccounts = Main.labelNumAvailableAccountsAP;
+		labelNumAvailableAccounts.setText("000");
+		labelNumAvailableAccounts.setHorizontalAlignment(SwingConstants.RIGHT);
+		labelNumAvailableAccounts.setFont(new Font("Rubik Light", Font.PLAIN, 100));
+		labelNumAvailableAccounts.setBounds(281, 0, 211, 153);
+		contentPane.add(labelNumAvailableAccounts);
+		
+		JTextField numAccountsText = Main.numAccountsText;
+		numAccountsText.setHorizontalAlignment(SwingConstants.CENTER);
+		numAccountsText.setText("12");
+		numAccountsText.setBackground(new java.awt.Color(233,232,232));
+		numAccountsText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		numAccountsText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		numAccountsText.setBounds(173, 352, 47, 20);
+		contentPane.add(numAccountsText);
+		numAccountsText.setColumns(10);
+		
+		JTextField getSMSEmailText = Main.getSMSEmailText;
+		getSMSEmailText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		getSMSEmailText.setColumns(10);
+		getSMSEmailText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		getSMSEmailText.setBackground(new Color(233, 232, 232));
+		getSMSEmailText.setBounds(173, 452, 101, 20);
+		contentPane.add(getSMSEmailText);
+		
+		JTextField nikeAccountFirstNameText = Main.nikeAccountFirstNameText;
+		nikeAccountFirstNameText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		nikeAccountFirstNameText.setColumns(10);
+		nikeAccountFirstNameText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(176, 210, 54)));
+		nikeAccountFirstNameText.setBackground(new Color(233, 232, 232));
+		nikeAccountFirstNameText.setBounds(173, 566, 60, 20);
+		contentPane.add(nikeAccountFirstNameText);
+		
+		JTextField nikeAccountLastNameText = Main.nikeAccountLastNameText;
+		nikeAccountLastNameText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		nikeAccountLastNameText.setColumns(10);
+		nikeAccountLastNameText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(61,195,218)));
+		nikeAccountLastNameText.setBackground(new Color(233, 232, 232));
+		nikeAccountLastNameText.setBounds(245, 566, 60, 20);
+		contentPane.add(nikeAccountLastNameText);
+		
+		JTextField addressLineIText = Main.addressLineIText;
+		addressLineIText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		addressLineIText.setColumns(10);
+		addressLineIText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		addressLineIText.setBackground(new Color(233, 232, 232));
+		addressLineIText.setBounds(449, 352, 118, 20);
+		contentPane.add(addressLineIText);
+		
+		JTextField getSMSTokenText = Main.getSMSTokenText;
+		getSMSTokenText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		getSMSTokenText.setColumns(10);
+		getSMSTokenText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		getSMSTokenText.setBackground(new Color(233, 232, 232));
+		getSMSTokenText.setBounds(449, 452, 118, 20);
+		contentPane.add(getSMSTokenText);
+		
+		JTextField nikePasswordText = Main.nikePasswordText;
+		nikePasswordText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		nikePasswordText.setColumns(10);
+		nikePasswordText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		nikePasswordText.setBackground(new Color(233, 232, 232));
+		nikePasswordText.setBounds(449, 566, 118, 20);
+		contentPane.add(nikePasswordText);
+		
+		JTextField addressLineIIText = Main.addressLineIIText;
+		addressLineIIText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		addressLineIIText.setColumns(10);
+		addressLineIIText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		addressLineIIText.setBackground(new Color(233, 232, 232));
+		addressLineIIText.setBounds(694, 352, 118, 20);
+		contentPane.add(addressLineIIText);
+		
+		JTextField stateText = Main.stateText;
+		stateText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		stateText.setColumns(10);
+		stateText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		stateText.setBackground(new Color(233, 232, 232));
+		stateText.setBounds(694, 452, 47, 20);
+		contentPane.add(stateText);
+		
+		JTextField zipText = Main.zipText;
+		zipText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		zipText.setColumns(10);
+		zipText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		zipText.setBackground(new Color(233, 232, 232));
+		zipText.setBounds(694, 566, 47, 20);
+		contentPane.add(zipText);
+		
+		JTextField phoneNumberText = Main.phoneNumberText;
+		phoneNumberText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		phoneNumberText.setColumns(10);
+		phoneNumberText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		phoneNumberText.setBackground(new Color(233, 232, 232));
+		phoneNumberText.setBounds(894, 352, 118, 20);
+		contentPane.add(phoneNumberText);
+		
+		JTextField nikeMainEmailText = Main.nikeMainEmailText;
+		nikeMainEmailText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		nikeMainEmailText.setColumns(10);
+		nikeMainEmailText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		nikeMainEmailText.setBackground(new Color(233, 232, 232));
+		nikeMainEmailText.setBounds(894, 452, 109, 20);
+		contentPane.add(nikeMainEmailText);
+		
+		JTextField cityText = Main.cityText;
+		cityText.setFont(new Font("Rubik", Font.ITALIC, 15));
+		cityText.setColumns(10);
+		cityText.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+		cityText.setBackground(new Color(233, 232, 232));
+		cityText.setBounds(894, 566, 118, 20);
+		contentPane.add(cityText);
+		
+		JLabel labelCreateAccountButton = new JLabel("New label");
+		labelCreateAccountButton.setFont(new Font("Rubik", Font.ITALIC, 17));
+		labelCreateAccountButton.setHorizontalAlignment(SwingConstants.CENTER);
+		labelCreateAccountButton.setOpaque(true);
+		labelCreateAccountButton.setBackground(new java.awt.Color(61,195,218));
+		labelCreateAccountButton.setBounds(480, 618, 375, 35);
+		contentPane.add(labelCreateAccountButton);
+		
+		
+		
+		
+		
+		//_____________Random labels and other stuff_______________
+		JLabel lblAvailableDC = new JLabel("Available");
+		lblAvailableDC.setFont(new Font("Roboto", Font.BOLD, 48));
+		lblAvailableDC.setBounds(492, 70, 211, 51);
+		contentPane.add(lblAvailableDC);
+		
+		JLabel lblAccountsDC = new JLabel("Accounts");
+		lblAccountsDC.setFont(new Font("Roboto Lt", Font.PLAIN, 48));
+		lblAccountsDC.setBounds(697, 70, 211, 51);
+		contentPane.add(lblAccountsDC);
+		
+		JLabel lblCreateDC = new JLabel("Create");
+		lblCreateDC.setFont(new Font("Roboto", Font.BOLD, 64));
+		lblCreateDC.setBounds(515, 235, 224, 60);
+		contentPane.add(lblCreateDC);
+		
+		JLabel lblNewDC = new JLabel("New");
+		lblNewDC.setFont(new Font("Roboto Th", Font.PLAIN, 52));
+		lblNewDC.setBounds(710, 238, 224, 60);
+		contentPane.add(lblNewDC);
+		
+		JLabel labelNumberOfAccountsDC = new JLabel("Number of accounts");
+		labelNumberOfAccountsDC.setFont(new Font("Rubik", Font.ITALIC, 17));
+		labelNumberOfAccountsDC.setBounds(173, 329, 217, 25);
+		contentPane.add(labelNumberOfAccountsDC);
+		
+		JLabel lblGetSmsEmail = new JLabel("getSMS email");
+		lblGetSmsEmail.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblGetSmsEmail.setBounds(173, 429, 180, 25);
+		contentPane.add(lblGetSmsEmail);
+		
+		JLabel lblNikeAccountName = new JLabel("Nike account name");
+		lblNikeAccountName.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblNikeAccountName.setBounds(173, 539, 198, 25);
+		contentPane.add(lblNikeAccountName);
+		
+
+		JLabel lblFirstDC = new JLabel("first");
+		lblFirstDC.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFirstDC.setFont(new Font("Rubik Light", Font.ITALIC, 10));
+		lblFirstDC.setBounds(173, 590, 60, 13);
+		contentPane.add(lblFirstDC);
+		
+		JLabel lblLastDC = new JLabel("last");
+		lblLastDC.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLastDC.setFont(new Font("Rubik Light", Font.ITALIC, 10));
+		lblLastDC.setBounds(245, 589, 60, 13);
+		contentPane.add(lblLastDC);
+		
+		JLabel lblAddressLineIDC = new JLabel("Address line I");
+		lblAddressLineIDC.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblAddressLineIDC.setBounds(449, 329, 146, 25);
+		contentPane.add(lblAddressLineIDC);
+		
+		JLabel lblGetsmsTokenDC = new JLabel("getSMS token");
+		lblGetsmsTokenDC.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblGetsmsTokenDC.setBounds(449, 429, 146, 25);
+		contentPane.add(lblGetsmsTokenDC);
+		
+		JLabel lblNikePasswordDC = new JLabel("Nike password");
+		lblNikePasswordDC.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblNikePasswordDC.setBounds(449, 539, 163, 25);
+		contentPane.add(lblNikePasswordDC);
+		
+		JLabel lblAddressLineIIDC = new JLabel("Address line II");
+		lblAddressLineIIDC.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblAddressLineIIDC.setBounds(694, 329, 130, 25);
+		contentPane.add(lblAddressLineIIDC);
+		
+		JLabel lblStateDC = new JLabel("State");
+		lblStateDC.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblStateDC.setBounds(694, 429, 101, 25);
+		contentPane.add(lblStateDC);
+		
+		JLabel lblZipDC = new JLabel("Zip");
+		lblZipDC.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblZipDC.setBounds(694, 539, 109, 25);
+		contentPane.add(lblZipDC);
+		
+		JLabel lblPhoneNumberDC = new JLabel("Phone number (shipping)");
+		lblPhoneNumberDC.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblPhoneNumberDC.setBounds(894, 329, 246, 25);
+		contentPane.add(lblPhoneNumberDC);
+		
+		JLabel lblNikeMainEmail = new JLabel("Nike main email");
+		lblNikeMainEmail.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblNikeMainEmail.setBounds(894, 429, 163, 25);
+		contentPane.add(lblNikeMainEmail);
+		
+		JLabel lblCity = new JLabel("City");
+		lblCity.setFont(new Font("Rubik", Font.ITALIC, 17));
+		lblCity.setBounds(894, 539, 109, 25);
+		contentPane.add(lblCity);
+		
+		JLabel lblNewAccountsAre = new JLabel("<html>New accounts are created on the serverside so the amount of accounts<br>you can create are tenative on how many unused, working proxies as well<br>as unused credit cards exist on the database. For this to work there must<br>exist functional proxies and already loaded credit cards.");
+		lblNewAccountsAre.setFont(new Font("Rubik Light", Font.ITALIC, 12));
+		lblNewAccountsAre.setBounds(477, 674, 509, 60);
+		contentPane.add(lblNewAccountsAre);
+		return contentPane;
+	}
 	
 	
 	
@@ -24,6 +264,7 @@ public class Panels extends UserInterface{
 	 * @return contentPane	Returns the same contentPane with elements
 	 */
 	public static JPanel proxyPanel(JPanel contentPane) {
+		Main.drawLine = false;
 		//___________Dark proxy panel__________
 		JPanel darkProxyPanel = Main.darkProxyPanel;
 		darkProxyPanel.setBackground(new java.awt.Color(51, 51, 51));
@@ -140,7 +381,8 @@ public class Panels extends UserInterface{
 	 * @param contentPane
 	 * @return contentPane
 	 */
-	public static JPanel cardPanel(JPanel contentPane) {		
+	public static JPanel cardPanel(JPanel contentPane) {	
+		Main.drawLine = false;
 		//___________Text fields (parameters)_________
 		JTextField numCardsText = Main.numCardsText;
 		numCardsText.setBackground(new java.awt.Color(233,232,232));

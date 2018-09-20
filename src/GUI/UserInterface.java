@@ -1,11 +1,14 @@
 package GUI;
 
+import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -25,6 +28,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
 import java.awt.ScrollPane;
+import java.awt.geom.Line2D;
+
 import javax.swing.JTextField;
 
 public class UserInterface extends JFrame{
@@ -67,14 +72,42 @@ public class UserInterface extends JFrame{
 		createSidebar(contentPane);
 		
 		
+		
 
 		
 		//contentPane = Panels.runPanel(contentPane);
 		// contentPane = Panels.cardPanel(contentPane);
-		//want 585 for 1/2 of panel length to be white -> 585px for black
+		
 		
 	}
 
+	//FIXME this only draws the line when this class is initialized
+	/**
+	 * Paints the lines inside the create account panel only if Main.drawLine
+	 * is true
+	 */
+    public void paint(Graphics g) {
+    	System.out.println("Calllled");
+        super.paint(g);  // fixes the immediate problem.
+        Graphics2D g2 = (Graphics2D) g;
+        Line2D noLine = new Line2D.Float(0,0,0,0);
+        if(Main.drawLine) {
+            Line2D blueLine = new Line2D.Float(30, 82, 1200, 233);
+            Line2D greenLine = new Line2D.Float(30, 97, 1200, 212);
+            g2.setStroke(new BasicStroke(2));
+        	g2.setColor(new java.awt.Color(176, 210, 54));
+        	g2.draw(greenLine);
+        	g2.setColor(new java.awt.Color(61,195,218));
+        	g2.draw(blueLine);
+        	
+        }else {
+        	g2.draw(noLine);
+        	
+        }
+    }
+	
+	
+	
 	public static void setRunPanel() {
 		setNullPanel();
 		contentPane = Panels.runPanel(contentPane);
@@ -94,6 +127,13 @@ public class UserInterface extends JFrame{
 	public static void setProxyPanel() {
 		setNullPanel();
 		contentPane = Panels.proxyPanel(contentPane);
+		contentPane.validate();
+		contentPane.repaint();
+	}
+	
+	public static void setAccountPanel() {
+		setNullPanel();
+		contentPane = Panels.accountPanel(contentPane);
 		contentPane.validate();
 		contentPane.repaint();
 	}
