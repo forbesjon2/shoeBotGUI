@@ -1,5 +1,5 @@
 # shoeBotGUI
-java swing GUI.
+java swing GUI thats not functional atm because I dont have the API endpoints for certain webstores
 
 
 
