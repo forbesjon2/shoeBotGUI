@@ -1,4 +1,4 @@
-# shoeBotGUI
+# shoeBotGUI - rychange example
 java swing GUI thats not functional atm because I dont have the API endpoints for certain webstores
 
 
@@ -19,7 +19,7 @@ Manage proxies
 
 
 ## Create new / load existing credit cards page
-This uses privacy.com to essentially create proxy credit cards 
+This uses privacy.com to essentially create proxy credit cards
 
 ![alt text](https://github.com/forbesjon2/shoeBotGUI/blob/master/data/images/2.PNG)
 
