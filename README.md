@@ -26,6 +26,6 @@ This uses privacy.com to create proxy credit cards.
 
 
 ## Run configurations
-The text has not been showing up as it should.
+The text has not been showing up as it should in some places.
 
 ![alt text](https://github.com/forbesjon2/shoeBotGUI/blob/master/data/images/3.PNG)
